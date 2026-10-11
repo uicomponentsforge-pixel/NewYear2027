@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b20">
+  <meta name="description" content="Watch the live countdown to New Year 2027 with neon effects and fireworks.">
+  <link rel="stylesheet" href="style.css">
+  <title>New Year 2027 | Countdown</title>
+</head>
+
+<body>
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="container">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="New Year 2027 home"><span class="brand-icon">N</span><span>NY<span
+            class="accent">2027</span></span></a>
+      <span class="live-indicator"><span class="live-dot"></span> LIVE COUNTDOWN</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow"><span></span> THE FUTURE STARTS HERE <span></span></p>
+      <h1>HELLO, <span class="gradient-text">2027</span></h1>
+      <p class="subtitle">A new year. A new beginning. Endless possibilities.</p>
+      <div class="year-display" aria-hidden="true"><span>2</span><span>0</span><span>2</span><span>7</span></div>
+
+      <section class="countdown-panel" aria-label="New Year countdown">
+        <div class="panel-heading"><span class="panel-line"></span>
+          <h2>TIME UNTIL THE NEW YEAR</h2><span class="panel-line"></span>
+        </div>
+        <div class="countdown-grid" id="countdown">
+          <div class="time-card">
+            <div class="time-number" id="days">000</div>
+            <div class="time-label">DAYS</div>
+          </div>
+          <div class="time-card">
+            <div class="time-number" id="hours">00</div>
+            <div class="time-label">HOURS</div>
+          </div>
+          <div class="time-card">
+            <div class="time-number" id="minutes">00</div>
+            <div class="time-label">MINUTES</div>
+          </div>
+          <div class="time-card">
+            <div class="time-number" id="seconds">00</div>
+            <div class="time-label">SECONDS</div>
+          </div>
+        </div>
+        <p class="target-date" id="target-date">JANUARY 1, 2027 · 12:00 AM</p>
+      </section>
+
+      <section class="celebration hidden" id="celebration" aria-live="polite">
+        <p class="celebration-kicker">THE MOMENT IS HERE</p>
+        <h2>HAPPY NEW YEAR</h2>
+        <div class="celebration-year">2027</div>
+        <p>May your new year be filled with happiness and new possibilities.</p>
+        <button class="button button-primary" id="replay-fireworks">Celebrate Again</button>
+      </section>
+    </section>
+
+    <section class="settings-panel">
+      <div class="setting">
+        <label for="timezone">YOUR TIME ZONE</label>
+        <select id="timezone"></select>
+      </div>
+      <div class="setting clock-setting">
+        <span class="setting-label">CURRENT LOCAL TIME</span>
+        <time id="local-clock">Loading...</time>
+      </div>
+      <div class="setting sound-setting">
+        <span class="setting-label">CELEBRATION SOUND</span>
+        <button class="button button-secondary" id="sound-toggle" type="button" aria-pressed="false">Sound: OFF</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>MADE FOR THE ARRIVAL OF <span>2027</span></p>
+      <p class="footer-small">A little closer to a brand-new beginning.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
